@@ -1,0 +1,103 @@
+#video-section {
+    margin-bottom: 181px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include laptop13 {
+        @include container($laptop13)
+    }
+    @include laptop {
+        @include container($laptop)
+    }
+    @include pc {
+        @include container($bigPc)
+    }
+}
+
+#video-deco {
+    border-radius: 50%;
+    position: relative;
+    max-width: 550px;
+    max-height: 372px;
+    @include laptop13 {
+        grid-column: 2 / 8;
+    }
+}
+
+.video {
+    max-width: 350px;
+    max-height: 240px;
+
+    @include ipadPro {
+    max-width: 550px;
+    max-height: 372px;
+    }
+}
+
+.video::after {
+
+    @include ipadPro {
+        content: "";
+        width: 129px;
+        height: 129px;
+        background-color: $color-element-1;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -60px;
+        right: -60px;
+        z-index: -1;
+    }
+}
+
+.video iframe {
+    border-radius: 20px;
+    box-shadow: 10px 20px 50px 0px rgba(0, 0, 0, 0.15);
+    width: 350px;
+    height: 240px;
+
+    @include ipadPro {
+        width: 550px;
+        height: 372px;
+    }
+}
+
+#video-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+    padding: 0 15px;
+
+    @include laptop13 {
+        grid-column: 9 / 14;
+        margin-top: 0px;
+    }
+}
+
+#video-text h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+#video-text h1::before {
+    content: "";
+    width: 178px;
+    height: 178px;
+    background-color: #EFF1FF;
+    border-bottom-right-radius: 100px;
+    position: absolute;
+    top: 40px;
+    left: -30px;
+    z-index: -1;
+
+    @include ipadPro {
+        top: -20px;
+    }
+}
+
+#video-text p {
+    color: $color-p-1;
+    line-height: 160%;
+}

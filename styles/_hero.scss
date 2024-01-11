@@ -1,0 +1,206 @@
+body {
+    position: relative
+}
+
+#hero {
+    @include container(90vw);
+    margin-bottom: 136px;
+
+    @include ipad {
+        @include container($ipad)
+    }
+    @include ipadPro {
+        @include container($ipadPro)
+    }
+    @include laptop13 {
+        @include container($laptop13)
+    }
+    @include laptop {
+        @include container($laptop)
+    }
+    @include pc {
+        @include container($pc)
+    }
+}
+
+#hero-text { 
+    margin-right: 95px;
+    grid-column: 3 / 14;
+    grid-row: 1;
+    position: relative;
+
+    @include ipadPro {
+        grid-column: 2 / 8;
+    }
+}
+
+#hero-text h1 {
+    font-size: 40px;
+    margin: 168px 0 40px 0;
+}
+
+#hero-text p {
+    color: $color-p-1;
+    line-height: 160%;
+    margin-bottom: 33px;
+}
+
+#hero-button {
+    @include button;
+    font-size: 20px;
+    margin-bottom: 144px;
+}
+
+#hero-button:hover {
+    @include button-hover;
+    font-size: 20px;
+}
+
+#hero-button::before {
+    @include ipadPro {
+    content: url(../img/Dot-grey.svg);
+    position: absolute;
+    bottom: 20px;
+    left: -60px;
+    z-index: -1;
+    }
+}
+
+#hero-button::after {
+    @include ipadPro {
+    content: url(../img/Dot-grey.svg);
+    position: absolute;
+    bottom: 20px;
+    left: 150px;
+    z-index: -1;
+    }
+}
+
+#hero-img {
+    min-height: 100%;
+    position: relative;
+    grid-column: 2 / -1;
+    grid-row: 1;
+    opacity: 30%;
+    z-index: -1;
+
+    @include ipadPro {
+        grid-column: 8 / -1;
+        opacity: 100%;
+    }
+}
+
+#hero-deco-container {
+    height: 100%;
+}
+
+#hero-deco-container img {
+    border-radius: 0px 0px 0px 200px;
+    height: 100%;
+    object-fit: cover;
+}
+
+#hero-deco-container::before {
+    content: "";
+    display: block;
+    background-color: #DAE9FF;;
+    width: 129px;
+    height: 129px;
+    border-radius: 50%;
+    position: absolute;
+    left: -66px;
+    z-index: -1;
+}
+
+#hero-deco-container::after {
+    content: "";
+    display: block;
+    background-color: $color-element-1;
+    width: 178px;
+    height: 178px;
+    border-bottom-right-radius: 50%;
+    position: absolute;
+    right: 12px;
+    bottom: -96px;
+    z-index: -1;
+}
+
+#modal {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#whiteW {
+    color: white;
+    background-color: #6c7aff;
+    border-radius: 30px;
+    position: fixed;
+    top: 10vh;
+    height: 80vh;
+    width: 100vw;
+    padding: 50px;
+    z-index: 100000;
+
+    @include ipadPro {
+        width: 40%;
+        height: 80vh;
+    }
+}
+
+#whiteW form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 0px;
+}
+
+#whiteW form button {
+    color: white;
+    margin-top: 40px;
+    background-color: #2639ED;
+}
+
+#whiteW form button:hover {
+    background-color: #4558fe;
+}
+
+#whiteW form label {
+    margin-bottom: 10px;
+}
+
+#whiteW form input,
+#whiteW form button {
+    padding: 20px 40px;
+    border-radius: 40px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+#whiteW span {
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    border: none;
+    background-color: #6c7aff;
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+}
+
+#whiteW span:hover {
+    cursor: pointer;
+}
+
+.disable-scroll{
+    overflow-y: hidden;
+  }

@@ -1,0 +1,120 @@
+#newsletter {
+    @include container;
+    margin-bottom: 10vh;
+    margin-top: -15vh;
+}
+
+#deco-newsletter {
+    position: relative;
+    grid-column: 2 / 14;
+}
+
+#newsletter-container {
+    background-color: $color-element-2;
+    border-radius: 75px;
+    min-height: 292px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    @include ipadPro {
+        flex-direction: row;
+    }
+}
+
+#newsletter-container::before {
+    content: "";
+    width: 178px;
+    height: 178px;
+    background-color: $color-element-1;
+    border-bottom-left-radius: 100px;
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
+    z-index: -1;
+}
+
+#newsletter-container::after {
+    content: url(../img/vector/Dot-blue.svg);
+    position: absolute;
+    top: -60px;
+    right: -35px;
+    z-index: -1;
+}
+
+
+#newsletter-text {
+    margin-top: 2vh;
+
+    @include ipadPro {
+        margin-top: 0px;
+    }
+}
+#newsletter-text h1 {
+    font-size: 40px;
+    margin-bottom: 17px;
+    margin-top: -10px;
+    margin-left: 3vw;
+}
+
+#newsletter-text p {
+    color: $color-p-2;
+    font-size: 18px;
+    line-height: 160%;
+    margin-left: 3vw;
+}
+
+#form-container {
+    @include ipadPro {
+        background: url(../img/vector/blue-rectangle.png);
+        height: 292px;
+        width: 497px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -3vh;
+    margin-left: 20vw;
+
+    @include ipadPro {
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+}
+
+#email {
+    padding: 30px 100px 30px 34px;
+    border-radius: 60px;
+    border: none;
+    box-shadow: 10px 20px 50px 0px rgba(0, 0, 0, 0.15);
+    margin-left: -100px;
+    color: #959595;
+    font-size: 16px;
+
+    @include ipadPro {
+        padding: 30px 255px 30px 34px;
+    }
+}
+
+#form-container button{
+    @include button;
+    margin-left: -195px;
+    margin-top: 5px;
+
+    @include ipadPro {
+        margin-top: 0px;
+    }
+}
+
+#form-container button:hover{
+    @include button-hover;
+}

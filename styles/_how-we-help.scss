@@ -1,0 +1,220 @@
+#how-we-help {
+    margin-bottom: 146px;
+    display: flex;
+    flex-direction: column;
+
+    @include ipadPro {
+        @include container;
+    }
+}
+
+#help-text-deco {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include ipadPro {
+        grid-column: 2 / 6;
+        grid-row: 1;
+    }
+}
+
+#help-text {
+    margin: 10vh 10vw 5vh 10vw;
+    position: relative;
+
+    @include ipadPro {
+        margin: 0px 0px 5vh 0px ;
+    }
+}
+
+
+#help-text h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+#help-text h1::before {
+    content: "";
+    position: absolute;
+    left: -39px;
+    top: -60px;
+    width: 178px;
+    height: 178px;
+    background-color: $color-element-1;
+    border-top-left-radius: 100px;
+    z-index: -1;
+}
+
+#help-text p {
+    color: $color-p-1;
+    line-height: 160%;
+    position: relative;
+}
+
+#help-text p::before,
+#help-text p::after {
+    @include ipadPro {
+        content: url(../img/vector/Dot-blue.svg);
+        display: block;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        bottom: -225px;
+        z-index: -1;
+    }
+}
+
+#help-text p::after {
+    right: 90px;
+}
+
+#help-card {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @include ipadPro {
+        max-height: 870px;
+        flex-direction: row;
+        grid-column: 5 / -1;
+        grid-row: 1;
+    }
+}
+
+#left-card::before {
+    content: "";
+    position: absolute;
+    right: 0px;
+    left: 10vw;
+    top: 15vh;
+    height: 75%;
+    width: 90vw;
+    background-color: $color-element-2;
+    border-top-left-radius: 150px;
+    margin-bottom: 5%;
+    margin-top: 13%;
+    
+    z-index: -1;
+
+    @include ipadPro {
+       left: 0px;
+       top: 0px;
+    }
+}
+
+#right-card .card:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border: 8px solid #FF007A;
+    border-radius: 50%;
+    bottom: -30px;
+    right: -35px;
+    z-index: -2;
+}
+
+#left-card {
+    margin-top: 79px;
+
+    @include ipadPro {
+        margin-right: 34px;
+    }
+}
+
+#right-card {
+    position: relative;
+    margin-top: 27px;
+
+    @include ipadPro {
+        margin-top: 0px;
+    }
+}
+
+#left-card .card:nth-child(1),
+#right-card .card:nth-child(1) {
+    margin-bottom: 30px;
+}
+
+.card {
+    height: 379px;
+    width: 308px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 40px;
+    border: 1px solid #F2F2F2;
+    background: #FFF;
+    box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.05);
+
+}
+
+.card img {
+    object-fit: contain;
+    margin-top: 39px;
+    margin-bottom: 54px;
+    height: 121px;
+    width: 121px;
+    padding: 23px;
+    border-radius: 20px;
+}
+
+#left-card .card:nth-child(1) img {
+    background: #F1F7FF;
+}
+
+#left-card .card:nth-child(2) img {
+    background: #FFF2F8;
+}
+
+#right-card .card:nth-child(1) img {
+    background: #FFF7E3;
+}
+
+#right-card .card:nth-child(2) img {
+    background: #DEFFEE;
+}
+
+.card h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 27px;
+    padding: 0 30px;
+}
+
+.card p {
+    color: #757575;
+    text-align: center;
+    line-height: 140%;
+    padding: 0 20px;
+}
+
+#card-1 {
+    grid-area: 1 / 1 / 2 / 2 ;
+}
+
+#card-1::before {
+    content: "";
+    display: block;
+    background-color: #F4F9FF;
+    grid-column: 1 / 4;
+    grid-row: 3 / 6;
+}
+
+#card-2 {
+    grid-area: 1 / 2 / 2 / 3 ;
+}
+
+#card-3 {
+    grid-area: 2 / 1 / 3 / 2 ;
+}
+
+#card-4 {
+    grid-area: 2 / 2 / 3 / 3 ;
+}

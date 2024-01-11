@@ -1,0 +1,74 @@
+@mixin ipad() {
+    @media screen and (min-width: $ipad) {
+      @content;
+    }
+}
+
+@mixin ipadPro() {
+    @media screen and (min-width: $ipadPro) {
+      @content;
+    }
+}
+
+@mixin laptop13() {
+    @media screen and (min-width: $laptop13) {
+      @content;
+    }
+}
+
+@mixin laptop() {
+    @media screen and (min-width: $laptop) {
+      @content;
+    }
+}
+  
+@mixin pc() {
+    @media screen and (min-width: $pc) {
+      @content;
+    }
+}
+  
+@mixin bigPc() {
+    @media screen and (min-width: $bigPc) {
+      @content;
+    }
+}
+
+@mixin container($max-width: 1200px) {
+  display: grid;
+  grid-template-columns:
+    minmax(5vw, 1fr) repeat(12, minmax(11px, $max-width / 12))
+    minmax(5vw, 1fr);
+}
+
+@mixin logo {
+  span {
+    font-size: 27px;
+    font-weight: 700;
+  }
+  font-size: 27px;
+}
+
+@mixin button {
+  color: #FFF;
+  font-size: 16px;
+  letter-spacing: 1.04px;
+  padding: 20px 40px;
+  border-radius: 60px;
+  background: #2639ED;
+  transition: 0.5s;
+  font-family: "Averta", sans-serif;
+}
+
+@mixin button-hover {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1.04px;
+  padding: 20px 40px;
+  border-radius: 60px;
+  background: #6c7aff;
+}
+
+@mixin white-gradient {
+	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}

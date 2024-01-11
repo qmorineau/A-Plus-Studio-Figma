@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Averta";
+    src: url(../averta.ttf);
+}
+@import 'reset' ;
+@import 'variable' ;
+@import 'mixins' ;
+
+body {
+    font-family: "Averta", sans-serif;
+    font-weight: 400;
+    color: #000;
+    font-size: 16px;
+    letter-spacing: 0.16px;
+    overflow-x: hidden
+}
+
+@import 'header';
+@import 'hero';
+@import 'client';
+@import 'how-we-help';
+@import 'video-section';
+@import 'review';
+@import 'newsletter';
+@import 'footer';
+
+a:hover {
+    color: #2639ED;
+}

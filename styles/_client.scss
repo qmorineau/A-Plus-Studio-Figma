@@ -1,0 +1,102 @@
+#our-client {
+    display: flex;
+	justify-content: center;
+	flex-direction: column;
+    margin-bottom: 10vh;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	gap: 7vw;
+
+	@include ipad {
+		flex-direction: row;
+		max-height: 124px;
+	}
+}
+
+#client-text {
+	min-width: 30vw;
+}
+
+#client-text h1 {
+    font-size: 40px;
+	margin-bottom: 17px;
+}
+
+#client-text p {
+    color: $color-p-2;
+    font-size: 18px;
+    line-height: 160%;
+}
+
+
+$animationSpeed: 10s;
+
+// Animation
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 6))}
+}
+
+// Styling
+.slider {
+	background: white;
+	height: 100px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	max-width: 80vw
+}
+
+.slide-track {
+    animation: scroll $animationSpeed linear infinite;
+    display: flex;
+    align-items: center;
+    width: calc(250px * 12);
+}
+
+.slide {
+    height: 100px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.slide img {
+    object-fit: cover;
+}
+
+.slider {
+	background: white;
+	height: 100px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 850%;
+	
+	&::before,
+	&::after {
+		@include white-gradient;
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 200px;
+		z-index: 2;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+}
+
+.amazon {
+    padding-top: 30px;
+}
