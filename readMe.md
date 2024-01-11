@@ -19,7 +19,7 @@ To run the project locally, follow these steps:
 1. Clone the repository
 
     ```bash 
-    git clone https://github.com/qmorineau/a-plus-studio-figma.git
+    git clone https://github.com/qmorineau/A-Plus-Studio-Figma.git
 
 Open the index.html file in your preferred web browser.
 
