@@ -4,7 +4,7 @@
 
 The A+ Studio Figma project is a single-page web development project created to showcase and test proficiency in HTML, CSS, and Sass. Developed during the early stages of training, this project serves as a practical demonstration of the ability to translate visual designs into functional and responsive web pages.
 
-[See the project]([https://github.com/qmorineau/A-Plus-Studio-Figma](https://qmorineau.github.io/A-Plus-Studio-Figma/))
+[See the project](https://qmorineau.github.io/A-Plus-Studio-Figma/)
 
 ## Table of Contents
 
